@@ -4,6 +4,7 @@ app = Flask(__name__)
 app.secret_key = 'ullas'
 
 @app.route('/', methods = ['GET', 'POST'])
+
 def login():
     if request.method == 'POST':
         username = request.form.get('username')
