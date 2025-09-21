@@ -6,9 +6,9 @@ app = Flask(__name__)
 def home():
     return 'welcome to flask'
 
-@app.route('/aboutUs')
-def aboutUs():
-    return 'about me '
+@app.route('/aboutUs/<name>')
+def aboutUs(name):
+    return f'<h1> about {name}</h1> '
 
 @app.route('/submit', methods = ['POST', 'GET'])
 def submit():
